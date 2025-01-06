@@ -1,0 +1,129 @@
+@media only screen and (max-width: 500px) {
+    .sigUpOuterContainer {
+        grid-template-areas: "signUpInnerContainer";
+        grid-template-columns: 1fr;
+    }
+    #bgImage {
+        display: none;
+    }
+    .signupForm {
+        padding: 10% 10% 5% 10%;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1200px) {
+    .sigUpOuterContainer {
+        grid-template-areas: "signUpInnerContainer";
+        grid-template-columns: 1fr;
+    }
+    #bgImage {
+        display: none;
+    }
+    .signupForm {
+        padding: 10% 10% 5% 10%;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .sigUpOuterContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "bgImage signUpInnerContainer";
+    }
+    .signupForm {
+        padding: 5% 20% 0% 20%;
+    }
+}
+
+.sigUpOuterContainer {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    padding: 0%;
+    align-self: center;
+}
+
+.logo {
+    grid-area: logo;
+    font: Bold 35px/21px Sans-serif;
+    letter-spacing: 7px;
+    color: #43425D;
+    margin: 0;
+    opacity: 0.95;
+    text-align: center;
+}
+
+.tagline {
+    grid-area: tagline;
+    justify-self: center;
+    font: normal 18px/13px Sans-serif;
+    letter-spacing: 0px;
+    color: #4D4F5C;
+    margin: 0;
+    opacity: 0.5;
+}
+
+#bgImage {
+    grid-area: bgImage;
+    background: transparent url('../images/waves.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: 100% 100%;
+}
+
+.signUpInnerContainer {
+    grid-area: signUpInnerContainer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+}
+
+.signupForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 58px 80px 70px 70px 70px 70px 60px 60px 90px 21px;
+    grid-template-areas: "logo logo" "tagline tagline" "firstname lastname" "username username" "email email" "password password" "confirmPassword confirmPassword" "terms terms" "signup signup" "signin signin";
+    column-gap: 30px;
+}
+
+.signupBtn {
+    margin: 0 30%;
+}
+
+.signInContainer {
+    grid-area: signin;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-content: flex-start;
+    justify-self: center;
+}
+
+.signIn {
+    background: none;
+    border: none;
+    color: #43425D;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 0;
+    text-align: right;
+    font: normal 15px/25px Sans-serif;
+}
+
+.termsOfUseContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-self: flex-end;
+}
+
+.termsOfUse {
+    background: none;
+    border: none;
+    color: #43425D;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 0;
+    justify-self: center;
+    font: normal 15px/25px Sans-serif;
+}

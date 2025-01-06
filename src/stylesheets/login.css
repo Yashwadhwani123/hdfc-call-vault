@@ -1,0 +1,102 @@
+@media only screen and (max-width: 500px) {
+    .loginOuterContainer {
+        grid-template-areas: "loginform";
+        grid-template-columns: 1fr;
+    }
+    #bgImage {
+        display: none;
+    }
+    .loginForm {
+        padding: 0% 10%;
+        align-self: center;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1200px) {
+    .loginOuterContainer {
+        grid-template-areas: "loginform";
+        grid-template-columns: 1fr;
+    }
+    #bgImage {
+        display: none;
+    }
+    .loginForm {
+        padding: 0% 10%;
+        align-self: center;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .loginOuterContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "bgImage loginform";
+    }
+    .loginForm {
+        padding: 0% 25%;
+        align-self: center;
+    }
+}
+
+.loginOuterContainer {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+.logo {
+    grid-area: logo;
+    font: Bold 35px/21px Sans-serif;
+    letter-spacing: 7px;
+    color: #43425D;
+    margin: 0;
+    opacity: 0.95;
+    text-align: center;
+}
+
+.tagline {
+    grid-area: tagline;
+    justify-self: center;
+    font: normal 18px/13px Sans-serif;
+    letter-spacing: 0px;
+    color: #4D4F5C;
+    margin: 0;
+    opacity: 0.5;
+}
+
+#bgImage {
+    grid-area: bgImage;
+    background: transparent url('../images/waves.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: 100% 100%;
+}
+
+.loginForm {    
+    grid-area: loginform;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 58px 80px 70px 70px 70px 50px;
+    grid-template-areas: "logo logo" "tagline tagline" "username username" "password password" "checkbox forgotPassword" "login signup";
+    column-gap: 30px;
+}
+
+.forgotPasswordContainer {
+    grid-area: forgotPassword;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-content: flex-start;
+}
+
+.forgotPassword {
+    background: none;
+    border: none;
+    color: #43425D;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 0;
+    text-align: right;
+    font: normal 15px/25px Sans-serif;
+    margin: 0;
+}

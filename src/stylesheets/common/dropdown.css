@@ -1,0 +1,106 @@
+.selectdiv {
+  /* position: relative; */
+  /*Don't really need this just for demo styling*/
+  /* float: left; */
+  /* // width: 100%; */
+  min-width: 150px;
+  opacity: 1;
+  border-radius: 6px;
+  height: 31px;
+}
+
+.selectdiv:after {
+  content: "\f078";
+  font: normal normal normal 15px/1 FontAwesome;
+  color: #000000;
+  right: 11px;
+  top: 6px;
+  height: 34px;
+  padding: 8px 0px 0px 8px;
+  /* // border-left: 1px solid #0ebeff; */
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectdiv select {
+  /* -webkit-appearance: none; */
+  -moz-appearance: none;
+  /* appearance: none; */
+  display: block;
+  width: 100%;
+  /* // max-width: 320px; */
+  height: 20;
+  /* float: right; */
+  /* //   margin: 5px 0px; */
+  /* //   padding: 0px 24px; */
+  font-size: 14px;
+  /* //   line-height: 1.75; */
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 0px solid #000000;
+  -ms-word-break: normal;
+  word-break: normal;
+  margin-top: -1.8rem;
+}
+
+.borderLabel {
+  padding: 5px;
+  border: 1px solid #dcdcdc;
+}
+
+.borderLabel > label {
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  top: -20px;
+  left: 20px;
+  background-color: white;
+  color: #be0203;
+}
+
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+  display: none;
+}
+
+.dropdownLabel {
+  font-size: 11px;
+  /* //   font-family: Arial normal; */
+}
+.selectAddNew {
+  display: flex;
+  justify-content: center;
+  padding-right: 1.2em;
+  width: 100%;
+}
+.selectAddNew select {
+  margin-top: 0.2rem;
+  /* margin-top: 0.5rem; */
+  float: none;
+  /* height: auto; */
+  height: 20px;
+  font-size: 14px;
+  /* font-weight: 600; */
+}
+.filterDropdown {
+  margin-top: 0.3rem;
+}
+
+.addstandard-container {
+  /* .selectdiv{
+        // width: 100%;
+       min-width: 268px;
+    } */
+
+  /* .selectdiv{
+        min-width: 268px;
+    } */
+  /* .selectdiv select {
+        width: 100%;
+       max-width: 268px;
+    } */
+}
+.selectdiv select.custom-color {
+  color: gray !important;
+}

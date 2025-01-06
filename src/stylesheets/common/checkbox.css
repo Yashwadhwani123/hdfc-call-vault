@@ -1,0 +1,28 @@
+.standardCheckBox {
+    display: grid;
+    grid-template-columns: 20px auto;
+    grid-template-rows: 21px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkBox {
+    height: 18px;
+    width: 18px;
+    align-self: center;
+}
+
+.checkBoxText {
+    background: none;
+    border: none;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.standardTextColor {
+    color: #43425D;
+}

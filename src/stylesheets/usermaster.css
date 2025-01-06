@@ -1,0 +1,226 @@
+.content {
+    margin-top: 50px;
+}
+
+.table-data {
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.date-border{
+    outline: none;
+}
+
+.light-button {
+    height: 40px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: red;
+    width: 115px;
+    background-color: #ffff;
+    border:  1px solid red;
+}
+
+.clear-date {
+    height: 40px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    width: 115px;
+    background-color: #ffff;
+    
+}
+
+.content{
+    /* margin-top: 50px; */
+    width: 100%;
+    height: 100%;
+}
+
+.loading-blur {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    filter: blur(4px);
+}
+.border{
+    color: #00000029;
+}
+.border1{
+    padding: 0px;
+}
+.centre{
+    padding: 40px;
+}
+.headerline{
+    display: flex;
+    justify-content: space-between;
+}
+.table-head{
+    background-color: #005E9C;
+    color: white;
+    /* border-radius: 5px; */
+}
+.ctc-table{
+padding: 0px 0px 0px 0px;
+}
+.table{
+    border-radius: 5px;
+}
+.table-edit-icon{
+    padding: 0px 10px 0px 14px;
+    cursor: pointer;
+}
+.table-delete-delete{
+    padding: 0px 0px 0px 0px;
+    cursor: pointer;
+}
+.table-data-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.table-filter{
+  padding-left: 1.5em;
+  cursor: pointer;
+}
+
+
+.pagination-style {
+    border-color: transparent;
+   
+}
+.pagination-container {
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    /* margin-top: 20px;  */
+  }
+.nextButtonLink {
+    color: #005E9C !important; 
+    font-size: 16px; 
+    font-weight: 700;
+  }
+  .previousButtonLink{
+    font-size: 16px; 
+    font-weight: 700;
+  }
+@media only screen and (max-width: 774px) {
+.content {
+    overflow-x: hidden;
+}
+
+    .table-head{
+        font-size: 10px;
+    }
+    .table-data{
+        font-size: 10px;
+    }
+
+    .headerline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5em;
+        
+    }
+
+    .header-buttons {
+        display: flex;
+        flex-direction: row;
+        margin: 1em;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    .light-button {
+        margin-bottom: 1em;
+        
+    }
+
+    .clear-date {
+        margin-bottom: 1em;
+    }
+
+
+    
+}
+@media only screen and (min-width:774px) and (max-width: 1200px) {
+    .headerline {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+       
+    }
+
+    .header-buttons {
+        display: flex;
+        flex-direction: row;
+        margin: 2em;
+        flex-wrap: wrap;
+      
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    .date-picker {
+        display: flex;
+        margin-left: 0em;
+        margin-top: 0.3em;
+    }
+
+}
+
+
+
+/* inputfield.css */
+
+.search-container {
+    height: 2.5em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #005E9C;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%; /* Take up the full width by default */
+    max-width: 200px; /* Limit the width for larger screens */
+    margin: 0 auto; /* Center align the container horizontally */
+    margin-top: 0;
+    margin-bottom: 1em; /* Add some margin to the bottom */
+    margin-right: 0.5em;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    width: 98%; /* Take up the full width of the container */
+  }
+   
+    input[type="text"]::placeholder {
+        color: #000000;
+        font-weight: bold !important;
+
+      }
+  .search-icon {
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+    margin-left: 10px; /* Add some space between the input and icon */
+  }
+  .bgcolor_serchIcon{
+    background-color: #005E9C;
+    border: 1px solid #005E9C;
+    border-radius: 5px;
+    color: #dee2e6;
+  }
+
+  @media only screen and (min-width: 300px) and (max-width: 768px){
+    .headerline {
+        font-size: 1em;
+    }
+    }

@@ -1,0 +1,41 @@
+.standardTable {
+    background-color: white;
+    width: 100%;
+}
+
+.standardTable, tr, td {
+    padding: 5px;
+    border: 1px solid #E8E8E8;
+    border-collapse: collapse;
+}
+
+.standardTable th {
+    background-color: #D6DEFF;
+    color: #003399;
+    font: Bold 14px/26px Sans-serif;
+    text-transform: uppercase;
+}
+
+.standardTable thead>th {
+    height: 50px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.standardTable tr {
+    max-height: 40px;
+}
+
+.standardTable td {
+    font: normal 16px/22px Sans-serif;
+    color: #585858;
+    padding-left: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.standardTable tr:nth-child(odd) {
+    background-color: #F8FAFC;
+}

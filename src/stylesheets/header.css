@@ -1,0 +1,25 @@
+.headerContainer {
+    display: grid;
+    align-content: center;
+    background-color: #FFFFFF;
+    height: calc(100vh - 100vh * 0.93);
+    padding: 0 20px;
+}
+
+#searchbar {
+    border: none;
+    text-align: left;
+    font: normal 13px/20px Sans-serif;
+    letter-spacing: 0px;
+    opacity: 1;
+    color: #4D4F5C;
+    outline: none;
+}
+
+#searchbar::placeholder {
+    text-align: left;
+    font: Regular 13px/20px Sans-serif;
+    letter-spacing: 0px;
+    color: #4D4F5C;
+    opacity: 1;
+}

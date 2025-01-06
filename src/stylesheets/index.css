@@ -1,0 +1,11 @@
+:root {
+  --light-theme-primary-bg-color: #43425d;
+  --light-theme-secondary-bg-color: #ffffff;
+  --light-theme-primary-text-color: #43425d;
+  --light-theme-secondary-text-color: #4d4f5c;
+}
+
+body#hdfc-call-vault {
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+}

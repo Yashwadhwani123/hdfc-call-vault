@@ -1,0 +1,80 @@
+.standardButton {
+    height: 40px;
+    border-radius: 4px;
+    font-size: 13px;
+    width: 150px;
+    
+}
+
+.play_recording_button {
+    border: 1px solid #ED1C24;
+border-radius: 4px;
+    height: 23px;
+    width: 92px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.play_recording_icon {
+    background: transparent url('./../../images/Icon\ ionic-ios-play-circle.svg') 0% 0% no-repeat padding-box;
+    width: 12px;
+height: 12px;
+}
+
+.download_recording_button {
+    border: 1px solid #ED1C24;
+border-radius: 4px;
+    width: 25px;
+height: 23px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.standardButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.standardDarkButton {
+    border-width: 0px;
+    color: #ffffff;
+    background-color: #005E9C;
+    line-height: 25px;
+    font-weight: bold;
+}
+.standardLightButton {
+    /* margin-right: 1.5em; */
+    /* border: 1px solid #ED1C24; */
+    border: 1px solid #2091DE;
+    background-color: white;
+    color: #2091DE;
+    line-height: 13px;
+    font-weight: bold;
+}
+.checkStatusButton{
+    border-width: 0px;
+        color: #ffffff;
+        /* color: #2091DE; */
+        border: 1px solid #2091DE;
+        background-color: #005E9C;
+        /* background-color: white; */
+        line-height: 25px;
+        font-weight: bold;
+}
+
+.clear-date {
+    height: 40px;
+    /* border: 0; */
+    border-radius: 4px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    width: 115px;
+    background-color: #ffff;  
+}
+
+button:focus {
+    outline: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+    .standardLightButton {
+        margin-right: 1.5em;
+    }
+}

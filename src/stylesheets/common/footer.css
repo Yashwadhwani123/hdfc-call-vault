@@ -1,0 +1,44 @@
+.footerContainer {
+    display: grid;
+    grid-template-rows: 240px 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "footer" "subFooter";
+}
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #43425DE8;
+}
+
+.subFooter {
+    grid-area: subFooter;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--light-theme-primary-bg-color);
+}
+
+.leftFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "subscribeHeading subscribeHeading" "subscribeSubheading subscribeSubheading" "emailAddress subscribe";
+}
+
+.rightFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #43425DE8;
+}
+
+.subscribeHeading {
+    grid-area: subscribeHeading;
+}
+
+.subscribeSubheading {
+    grid-area: subscribeSubheading;
+}

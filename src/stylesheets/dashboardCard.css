@@ -1,0 +1,10 @@
+.cardContainer{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    background-color: white;
+}
+
+.statsContainer{
+    display: flex;
+}

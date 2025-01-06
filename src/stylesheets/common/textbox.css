@@ -1,0 +1,58 @@
+.textLabel {
+    padding: 5px;
+    border: 1px solid #005E9C;
+    border-radius: 5px;
+}
+
+
+
+.textLabel2 {
+    /* padding: 5px; */
+    padding-top: 2.4px;
+    height: 40px;
+    /* border: 1px solid #ED1C24; //old code color for Enter Mobile No */
+    border: 1px solid#005E9C!important;
+    border-radius: 5px;
+    /* width: 100px; */
+}
+.textLabel>label {
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    top: -24px;
+    left: 8px;
+    background-color: white;
+    /* color: #BE0203; */
+    color: #000000;
+    font-size: 10px;
+    font: normal normal normal 10px/11px Open Sans, Semibold;
+}
+.custom-style-input {
+    margin-top: -1.9rem;
+    border: 0px;
+    height: 20px;
+    width: 100%;
+    font: normal normal normal 14px/16px Arial;
+}
+.textLabel input:focus {
+    border: 0px solid transparent !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: 0 0 10px transparent !important;
+    padding: 0px !important;
+}
+.textLabel input{
+    padding: 0px !important;
+}
+.disabledStyle {
+    /* background: #e9ecef; */
+    background: #ED1C24;
+}
+
+.download-records-textbox {
+    height:32px;
+    width: 10em;
+    border: none;
+    outline: none;
+    font-weight:bold; 
+}

@@ -1,0 +1,35 @@
+.profileContainer {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "detailsContainer detailsContainer" "summaryContainer summaryContainer";
+    background-color: #ffffff;
+    padding: 2% 2%;
+    height: 100%;
+}
+
+.detailsContainer {
+    grid-area: detailsContainer;
+    display: flex;
+}
+
+.summaryContainer{
+    grid-area: summaryContainer;
+}
+
+.photoContainer{
+    width: 200px;
+}
+
+.profileImage {
+    width: 120px;
+    height: 120px;
+}
+
+.profileName {
+    border: none;
+    outline: none;
+    font: 400 22px/23px Sans-Serif;
+    letter-spacing: 0;
+    color: #000000;
+}

@@ -1,0 +1,112 @@
+.navbar-main {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    height: 55px;
+    width: 100vw;
+    z-index: 3;
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 4px 7px #00000012;
+opacity: 1;
+}
+
+.notify-icon {
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    opacity: 1;
+    height: 2.6em;
+    width: 2.5em;
+    margin-left: 2em;
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.notify-icon-img {
+    background: transparent url('../../images/Group\ 9916.png') 30% 50% no-repeat padding-box;
+    width: 2em;
+    height: 2em;
+    margin-left: 0.2em;
+}
+ul.ba {
+    list-style-type: none;
+}
+.logout-button {
+    color: gray;
+    width: 100px;
+    /* height: 1em; */
+    border-color: transparent;
+    border-radius: 3px;
+    margin-right: 1.9em;
+    position: absolute;  
+    height: 40px;  
+}
+
+.nav-profile {
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    color: black;
+    border-radius: 6px;
+    margin-right: 2em;
+    cursor: pointer;
+border-color: transparent;
+overflow: hidden;
+max-width: 19em;
+height: 2.5em;
+}
+
+
+
+.collapse-buttons {
+    border-radius: 5px;
+    border-color: transparent;
+    height: 3em;
+    margin-bottom: 0.1em;
+    color: white;
+    background-color: #005E9C;
+    width: 90vw;
+
+}
+
+
+
+/* MEDIA QUERIES  */
+
+@media only screen and (min-width: 980px) and (max-width: 2560px) {
+    
+   .collapse-buttons {
+       display: none;
+   }
+
+   .navbar-main {
+       width: 100%;
+   }
+}
+
+
+
+@media only screen and (max-width: 980px) {
+    .navbar-main {
+        display: flex;
+        justify-content: flex-start;
+    }
+   
+    .notify-icon {
+        display: flex;
+        position: relative;
+
+        justify-self: flex-end;
+        justify-content: flex-end;
+        margin-left: 2em;
+        margin-top: .1em;
+    }   
+    
+    .nav-profile {
+        
+        width: 90vw;
+        margin-bottom: .3em;
+        
+    }
+}

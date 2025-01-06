@@ -1,0 +1,125 @@
+.reports_dropdown {
+  margin-top: 0.3rem;
+  float: none;
+  height: 16px;
+  border: 0px solid black;
+  width: 100%;
+  color: #818181;
+}
+
+.all-border {
+  outline: none;
+}
+
+.download_call_dropdown {
+  width: 100%;
+  margin-right: 10px;
+  height: 100%;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 13px;
+  font-family: "Open Sans"
+}
+
+.download_call_div {
+  display: flex;
+  flex-direction: column;
+  padding: 0%;
+  width: 160px;
+  height: 40px;
+}
+
+.selectdiv {
+  /* position: relative; */
+  /*Don't really need this just for demo styling*/
+  /* float: left; */
+  /* // width: 100%; */
+  min-width: 150px;
+  opacity: 1;
+  border-radius: 6px;
+}
+
+.selectdiv:after {
+  content: "\f078";
+  font: normal normal normal 15px/1 FontAwesome;
+  color: #000000;
+  right: 11px;
+  top: 6px;
+  height: 34px;
+  padding: 8px 0px 0px 8px;
+  /* // border-left: 1px solid #0ebeff; */
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectdiv select {
+  /* -webkit-appearance: none; */
+  -moz-appearance: none;
+  /* appearance: none; */
+  display: block;
+  width: 100%;
+  /* // max-width: 320px; */
+  height: 20;
+  float: right;
+  /* //   margin: 5px 0px; */
+  /* //   padding: 0px 24px; */
+  font-size: 14px;
+  /* //   line-height: 1.75; */
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 0px solid #000000;
+  -ms-word-break: normal;
+  word-break: normal;
+  margin-top: -1.8rem;
+}
+
+.borderLabel {
+  padding: 5px;
+  border: 1px solid #dcdcdc;
+}
+
+.borderLabel > label {
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  top: -20px;
+  left: 20px;
+  background-color: white;
+  color: #be0203;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.dropdownLabel {
+  font-size: 11px;
+}
+.selectAddNew {
+  width: 100px;
+  background: white;
+}
+.selectAddNew select {
+  margin-top: 0.3rem;
+  float: none;
+  height: 16px;
+  border: 0px solid rgb(13, 48, 124);
+  width: 140px;
+  /* color: #818181; */
+  /* color:#000000; */
+  outline: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.filterDropdown {
+  margin-top: 0.3rem;
+}
+
+.selectdiv select.custom-color {
+  color: gray !important;
+}
