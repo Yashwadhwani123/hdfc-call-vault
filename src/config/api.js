@@ -23,15 +23,19 @@ const currentEnvironment = {
   },
 };
 
-export default process.env.REACT_APP_API_URL === CONSTANTS.ENVIRONMENT_VAR.LOCAL
-  ? currentEnvironment.local
-  : process.env.REACT_APP_API_URL === CONSTANTS.ENVIRONMENT_VAR.DEVELOPMENT
-  ? currentEnvironment.development
-  : process.env.REACT_APP_API_URL === CONSTANTS.ENVIRONMENT_VAR.STAGING
-  ? currentEnvironment.staging
-  : process.env.REACT_APP_API_URL === CONSTANTS.ENVIRONMENT_VAR.PRODUCTION
-  ? currentEnvironment.production
-  : currentEnvironment.development;
+const ACTIVE_ENVIRONMENT = 'local';
+
+export default currentEnvironment[ACTIVE_ENVIRONMENT];
+// export default 
+// process.env.REACT_APP_API_URL === CONSTANTS.ENVIRONMENT_VAR.LOCAL
+//   ? currentEnvironment.local
+//   : process.env.REACT_APP_API_URL === CONSTANTS.ENVIRONMENT_VAR.DEVELOPMENT
+//   ? currentEnvironment.development
+//   : process.env.REACT_APP_API_URL === CONSTANTS.ENVIRONMENT_VAR.STAGING
+//   ? currentEnvironment.staging
+//   : process.env.REACT_APP_API_URL === CONSTANTS.ENVIRONMENT_VAR.PRODUCTION
+//   ? currentEnvironment.production
+//   : currentEnvironment.development;
 
 // UAT URL
 

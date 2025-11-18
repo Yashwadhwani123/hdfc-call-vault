@@ -85,7 +85,7 @@ const CallRecords = () => {
     files: [],
     // retryFiles: [],
   };
-  
+
   const reducer = (state, action) => {
     switch (action.type) {
       case 'SET_FILES':
@@ -96,7 +96,7 @@ const CallRecords = () => {
         return state;
     }
   };
-  
+
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const { files } = state
@@ -209,7 +209,17 @@ const CallRecords = () => {
         id: val.metafilename,
         name: val.metafilename,
       }));
-      setMetaFileData(newMetaFileData);
+
+      const sortedMetaFileData = newMetaFileData.sort((a, b) => {
+        // LocaleCompare helps with alphanumeric sorting
+        return a.name.localeCompare(b.name, undefined, {
+          numeric: true,
+          sensitivity: "base",
+        });
+      });
+
+      // Now set the sorted data in state
+      setMetaFileData(sortedMetaFileData);
     } else if (response.status === CONSTANTS.STATUS.DATA_NOT_FOUND) {
       setMetaFileData([]);
     } else {
@@ -221,19 +231,14 @@ const CallRecords = () => {
   useEffect(() => {
     getCallCenterDropDownData();
     getMetaFileData();
-    // if (files) {
-    //   setValidFiles(files);
-    // }
-  // }, [files]);
-  }, []);
-
-  useEffect(() => {
-    // getCallCenterDropDownData();
-    // getMetaFileData();
     if (files) {
       setValidFiles(files);
     }
   }, [files]);
+
+  useEffect(() => {
+    getMetaFileData();
+  }, []);
 
   useEffect(() => {
     const filteredArray = selectedFiles.reduce((file, current) => {
@@ -330,7 +335,7 @@ const CallRecords = () => {
         };
 
         // await new Promise((resolve) => setTimeout(resolve, 5000));
-        
+
         const axiosResponse = await fetch(
           response.data[0].preSignedUrl,
           requestOptions
@@ -357,14 +362,14 @@ const CallRecords = () => {
             // await setFailedCount(fileFailedCount);
             // totalFileCount = totalFileCount - 1;
             //   await setFileCount(totalFileCount);
-              // files.push(filesData);
-              
-              // setFiles(...files,filesData)
-              retryFiles.push(filesData)
-              // dispatch({
-              //   type: 'SET_RETRY_FILES',
-              //   payload: [...retryFiles,filesData],
-              // });
+            // files.push(filesData);
+
+            // setFiles(...files,filesData)
+            retryFiles.push(filesData)
+            // dispatch({
+            //   type: 'SET_RETRY_FILES',
+            //   payload: [...retryFiles,filesData],
+            // });
             console.log("errr------------------", e);
           });
 
@@ -453,9 +458,9 @@ const CallRecords = () => {
       setCount(files.length);
       totalCount = files.length;
       chunks(files, uploadFile)
-        .then(async(res) => {
+        .then(async (res) => {
           if (files.length) {
-            
+
             // dispatch({
             //   type: 'SET_FILES',
             //   payload: [...new Map(files.map((item) => [item["path"], item])).values()],
@@ -463,11 +468,16 @@ const CallRecords = () => {
             // files = [
             //   ...new Map(files.map((item) => [item["path"], item])).values(),
             // ];
-            await new Promise((resolve) => setTimeout(resolve, 10000));
+            if (retryFiles.length > 0) {
+              console.log("retryFiles", retryFiles);
+
+              await new Promise((resolve) => setTimeout(resolve, 5000));
+            }
             chunks(retryFiles, uploadFile).then((res) => {
-            setProceedFlag(true);
-            totalCount = totalCount + res.length;
-            setFileCount(totalFileCount);
+
+              setProceedFlag(true);
+              totalCount = totalCount + res.length;
+              setFileCount(totalFileCount);
             });
           } else {
             setProceedFlag(true);
@@ -585,8 +595,7 @@ const CallRecords = () => {
     });
     callRecordAjax(
       CONSTANTS.API_METHODS.GET,
-      `${CONSTANTS.API.CHECK_STATUS}/${localStorage.getItem("USER_ID")}/1/${
-        currentPage + 1
+      `${CONSTANTS.API.CHECK_STATUS}/${localStorage.getItem("USER_ID")}/1/${currentPage + 1
       }`,
       {},
       { id: localStorage.getItem("USER_ID") },
@@ -632,8 +641,7 @@ const CallRecords = () => {
     });
     callRecordAjax(
       CONSTANTS.API_METHODS.GET,
-      `${CONSTANTS.API.CHECK_STATUS}/${localStorage.getItem("USER_ID")}/1/${
-        currentPage - 1
+      `${CONSTANTS.API.CHECK_STATUS}/${localStorage.getItem("USER_ID")}/1/${currentPage - 1
       }`,
       {},
       { id: localStorage.getItem("USER_ID") },
@@ -763,7 +771,7 @@ const CallRecords = () => {
               {/* <div className="recordsTextbox">
                                 <RegularTextBox
                                     textLabel="S3 Location"
-                                    required="" 
+                                    required=""
                                     placeholder="S3 Location"
                                     name="S3 Location"
                                     id="S3 Location"
@@ -803,7 +811,7 @@ const CallRecords = () => {
                           // onClick: Event => setFileFlag(true)
                         })}
                       >
-                        
+                       
                       </div>
                     </section>
                   )}
@@ -856,9 +864,9 @@ const CallRecords = () => {
                   <b>Please Add call record files</b>
                 </div>
               ) : // <div className="textDropzoneFile">
-              //     {/* {thumbs} */}
-              // </div>
-              null}
+                //     {/* {thumbs} */}
+                // </div>
+                null}
 
               {fileloading ? (
                 <div className="d-flex">

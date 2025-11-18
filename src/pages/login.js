@@ -71,7 +71,7 @@ export default function Loginpage(props) {
         !response ||
         response.status === CONSTANTS.STATUS.UNAUTHORIZED ||
         response.status === CONSTANTS.STATUS.BAD_REQUEST ||
-        response.status === CONSTANTS.STATUS.DUPLICATE_RECORD
+        response.status === CONSTANTS.STATUS.DUPLICATE_RECORD 
       ) {
         // this.setState({ invalidLogin: true, isLoading: false });
         setInvalidLogin(true);
@@ -96,7 +96,22 @@ export default function Loginpage(props) {
           progress: undefined,
           theme: "colored",
         });
-      } else if (response.status === CONSTANTS.STATUS.OK) {
+      }
+       else if (response.status === CONSTANTS.STATUS.TO_MANAY_ATTEMPTS || response.status === 429) {
+      toast.error(
+        response.message || "Too many login attempts. Please try again after some time.",
+        {
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "colored",
+        }
+      );
+    }
+ else if (response.status === CONSTANTS.STATUS.OK) {
         let abc = response?.data[0]?.permission
         let temp = encryptData(JSON.stringify(abc),"enc")
         console.log("temp123",response);
