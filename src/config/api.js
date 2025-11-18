@@ -4,10 +4,10 @@ import CONSTANTS from '../utils/constants';
 
 const currentEnvironment = {
   local: {
-    userUrl: 'https://callv.hdfclife.com',
-    roleUrl: 'https://callv.hdfclife.com',
-    callRecordUrl: 'https://callv.hdfclife.com',
-    callCenterUrl: 'https://callv.hdfclife.com',
+    userUrl: 'http://localhost:8083',
+    roleUrl: 'http://localhost:8082',
+    callRecordUrl: 'http://localhost:8084',
+    callCenterUrl: 'http://localhost:8081',
   },
   development: {
     userUrl: 'https://callv.hdfclife.com',
